@@ -20,7 +20,7 @@ syn match codeownersPattern /^\S\+/ contained containedin=codeownersDef nextgrou
 syn match codeownersPatternSpecial /\\\@<![?*]\|\_^!/ contained containedin=codeownersPattern display
 syn match codeownersOwners /\s\+.*$/ contained contains=codeownersUserOrTeam,codeownersEmail
 syn match codeownersUserOrTeam /\%(\s\+\)\@<=@\S\+/ contained containedin=codeownersOwners display
-syn match codeownersEmail /\%(\s\+\)\@<=[^@[:space:]]\+@\S\+/ contained containedin=codeownersOwners display
+" syn match codeownersEmail /\%(\s\+\)\@<=[^@[:space:]]\+@\S\+/ contained containedin=codeownersOwners display
 
 hi def link codeownersComment Comment
 hi def link codeownersPattern Define
